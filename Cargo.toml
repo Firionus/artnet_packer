@@ -1,5 +1,5 @@
 [package]
-name = "artnet_sender"
+name = "art_packer"
 version = "0.1.0"
 authors = ["Johannes <jcmf.schule@gmail.com>"]
 edition = "2018"
