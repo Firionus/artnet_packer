@@ -5,7 +5,7 @@ use std::convert::TryFrom;
 /// The trait `From` is implemented for `u8`and `TryFrom` for `u16` and `i32`:
 ///
 /// ```
-/// use art_packer::PortAddress;
+/// use artnet_packer::PortAddress;
 /// use std::convert::TryInto;
 /// let a: PortAddress = 1.into(); //convert from u8 never fails
 /// let b: PortAddress = 2u16.try_into().unwrap(); //u16 could fail if too big

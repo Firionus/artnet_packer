@@ -1,4 +1,4 @@
-# art_packer
+# artnet_packer
 
 ArtPacker creates packets to send DMX over Art-Net.
 

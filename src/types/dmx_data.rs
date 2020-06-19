@@ -3,7 +3,7 @@ use std::convert::TryFrom;
 /// `DMXData` is a `Vec<u8>` with a length from 1 to 512. This is checked upon construction with `TryFrom`.
 ///
 /// ```
-/// use art_packer::DMXData;
+/// use artnet_packer::DMXData;
 /// use std::convert::TryInto;
 /// let data: DMXData = vec![0,1,2,3,255].try_into().unwrap();
 /// //could fail if length = 0 or over > 512

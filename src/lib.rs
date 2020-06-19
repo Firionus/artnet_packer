@@ -11,14 +11,14 @@
 //! track of previously packed data:
 //!
 //! ```
-//! use art_packer::{ArtPacker, PortAddress, DMXData};
+//! use artnet_packer::{ArtPacker, PortAddress, DMXData};
 //! let mut packer = ArtPacker::new();
 //! ```
 //!
 //! At every tick of your render loop, you pass a `HashMap<PortAddress, DMXData>` into ArtPacker:
 //!
 //! ```
-//! # use art_packer::{ArtPacker, PortAddress, DMXData};
+//! # use artnet_packer::{ArtPacker, PortAddress, DMXData};
 //! # let mut packer = ArtPacker::new();
 //! use std::collections::HashMap;
 //! use std::convert::TryFrom;
