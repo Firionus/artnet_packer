@@ -5,17 +5,18 @@
 //!
 //! ArtPacker packs unchanged data only every 800 ms. As in the sACN standard, we call this behaviour suppression.
 //!
-//! How to use
-//! ==========
+//! # How to use
 //!
 //! Before you start your render loop, `use` the three relevant types this module provides. Then create a new `ArtPacker` that keeps
 //! track of previously packed data:
+//!
 //! ```
 //! use art_packer::{ArtPacker, PortAddress, DMXData};
 //! let mut packer = ArtPacker::new();
 //! ```
 //!
 //! At every tick of your render loop, you pass a `HashMap<PortAddress, DMXData>` into ArtPacker:
+//!
 //! ```
 //! # use art_packer::{ArtPacker, PortAddress, DMXData};
 //! # let mut packer = ArtPacker::new();
@@ -34,6 +35,10 @@
 //! The ArtDmx packets in the form of `Vec<u8>` should then be sent over UDP to the subscribers of the corresponding Port Address.
 //!
 //! You should call `ArtPacker.pack` and send the result at least every 4 seconds to comply with Art-Net specifications.
+//!
+//! # Credit
+//!
+//! Art-Net™ Designed by and Copyright Artistic Licence Holdings Ltd
 
 use std::collections::{HashMap, HashSet};
 #[allow(unused_imports)]
