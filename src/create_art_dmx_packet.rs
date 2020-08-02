@@ -13,12 +13,11 @@ pub fn create_art_dmx_packet(universe: &PortAddress, dmx_data: &DMXData) -> Vec<
     }
     let length: u16 = data.len() as u16;
     vec![
-        String::from("Art-Net").into_bytes(), // ID[0..7]
-        vec![0x00],                           //ID[7] null termination
-        vec![0x00, 0x50],                     //OpOutput=0x5000, low byte first
-        vec![0x00, 0x0e],                     //ProtVer=14, high byte first
-        vec![0x00],                           //Sequence, 0x00 to disable
-        vec![0x00],                           //Physical, 0x00 to disable
+        b"Art-Net\0".to_vec(),           //ID
+        vec![0x00, 0x50],                //OpOutput=0x5000, low byte first
+        vec![0x00, 0x0e],                //ProtVer=14, high byte first
+        vec![0x00],                      //Sequence, 0x00 to disable
+        vec![0x00],                      //Physical, 0x00 to disable
         universe.to_le_bytes().to_vec(), //Port Address, two bytes with the highest bit 0, low byte first, use of Universe 0 is discouraged
         length.to_be_bytes().to_vec(), //Length of Data, must be even in range 2-512, two bytes, high byte first
         data,                          //some DMX data
