@@ -4,6 +4,14 @@
 //! However, only the ArtDmx packet from page 45 is implemented.
 //!
 //! ArtPacker packs unchanged data only every 800 ms. As in the sACN standard, we call this behaviour suppression.
+//! 
+//! # Disclaimer
+//! 
+//! This is my first Rust project. The code is tested but may not be optimal. This library is not on crates.io. 
+//! I am not sure if I will support this library in the future. 
+//! However, if you have any concerns, feel free to open an issue. 
+//! 
+//! For a lower level Art-Net library, see https://github.com/Trangar/artnet_protocol. 
 //!
 //! # How to use
 //!
